@@ -8,9 +8,9 @@ A template that makes react and reflux web app developmet easier.
 
 ## Features
 
-* React 0.13
-* React Router 0.13
-* Reflux 0.12 ( Refactor of Flux )
+* React and ReactDOM 0.14
+* React Router 1.0.0-rc3
+* Reflux 0.2.13 ( Refactor of Flux )
 * Node 4.1 Compatible
 * CoffeeScript 0.10
 * CJSX ( Coffee JSX ) | if you use .cjsx extension
