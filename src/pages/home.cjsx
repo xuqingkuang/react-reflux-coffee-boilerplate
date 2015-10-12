@@ -1,23 +1,16 @@
-React = require 'react'
+React         = require 'react'
+Reflux        = require('reflux')
+TitleStore    = require '../stores/titles'
+TitleActions  = require('../actions/titles')
 
-titles = [
-  'React Reflux Coffee Boilerplate'
-  'React'
-  'Reflux'
-  "Coffee"
-  'Boilerplate'
-]
+module.exports = React.createClass
 
-module.exports = class Home extends React.Component
-  constructor: (props) ->
-    super props
-    @state = {title: titles[0]}
-    @interval = setInterval((=> this.tick()), 1000)
+  mixins: [
+    Reflux.connect(TitleStore)
+  ]
 
-  tick: ->
-    next = titles.indexOf(@state.title) + 1
-    next = 0 if next is titles.length
-    @setState {title: titles[next]}
+  componentDidMount: ->
+    @interval = setInterval (=> TitleActions.nextTitle(@state.title)), 1000
 
   componentWillUnmount: ->
     clearInterval @interval
