@@ -1,5 +1,4 @@
-React   = require 'react'
-Router  = require  'react-router'
-routes  = require './routes'
+ReactDOM    = require('react-dom')
+routes      = require './routes'
 
-Router.run routes, (Handler) => React.render <Handler />, document.body
+ReactDOM.render routes, document.getElementById('site')

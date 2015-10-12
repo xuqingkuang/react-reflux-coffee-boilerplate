@@ -1,6 +1,7 @@
-React  = require 'react/addons'
-Router = require('react-router')
-{ Route, RouteHandler, Link } = Router
+React           = require 'react'
+ReactRouter     = require 'react-router'
+
+{ Route, RouteContext, Link } = ReactRouter
 
 styles =
   container:
@@ -38,7 +39,7 @@ module.exports = React.createClass
         </p>
       </header>
       <section style={styles.content}>
-        <RouteHandler />
+        {this.props.children}
       </section>
       <footer style={styles.footer}>
         <p><small>Hosted on GitHub Pages — Theme by <a href="https://github.com/orderedlist">orderedlist</a> and refined by <a href="http://kuang.it">XQ Kuang</a></small></p>

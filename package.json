@@ -22,9 +22,10 @@
     "url": "https://github.com/xuqingkuang/react-reflux-coffee-boilerplate"
   },
   "dependencies": {
-    "react": "^0.13.3",
-    "react-router": "^0.13.3",
-    "reflux": "^0.2.12"
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0",
+    "react-router": "^1.0.0-rc3",
+    "reflux": "^0.2.13"
   },
   "devDependencies": {
     "cjsx-loader": "^2.0.1",
@@ -38,6 +39,6 @@
     "react-transform-hmr": "^1.0.1",
     "webpack": "^1.12.2",
     "webpack-dev-middleware": "^1.2.0",
-    "webpack-hot-middleware": "^2.3.0"
+    "webpack-hot-middleware": "^2.4.1"
   }
 }
